@@ -6,6 +6,10 @@
       <div v-if="!isWhile" class="eat-btn" @click="hanldEating">开始随缘</div>
       <div v-else class="eat-btn" @click="hanldStop">就是它了！</div>
     </section>
+
+    <footer class="eat-footer">
+        <p>Author：RuanChon -- 2021/06/03</p>
+    </footer>
   </div>
 </template>
 
@@ -118,6 +122,14 @@ export default {
       cursor: pointer;
       color: #fff;
     }
+  }
+  .eat-footer {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      bottom: 12px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
   }
 }
 
