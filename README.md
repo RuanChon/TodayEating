@@ -1,16 +1,12 @@
-# eatwhat
+# 群里摸鱼的时候大家都不知道吃啥，然后闲着无事做了一个小Demo，纠结不知道吃啥玩玩还行 ：）
 
-## Project setup
+## 运行步骤
 ```
 yarn install
 ```
-
-### Compiles and hot-reloads for development
 ```
 yarn serve
 ```
-
-### Compiles and minifies for production
 ```
 yarn build
 ```
