@@ -21,7 +21,6 @@ export default {
       Height: undefined,
       foodName: undefined,
       isWhile: false,
-      current: 0,
       // 菜谱
       foodMenu: [
           "热干面", 
@@ -76,15 +75,20 @@ export default {
     };
   },
   methods: {
-    hanldEating() {
-      let idx = this.current;
-      let timer = null;
-      this.isWhile = true;
-      console.log("开始循环", this.isWhile);
 
+    // 开始循环
+    hanldEating() {
+      this.isWhile = true;
       this.setim();
     },
 
+    // 暂停循环
+    hanldStop() {
+      this.isWhile = false;
+      this.setim()
+    },
+
+    // 处理菜谱循环
     setim() {
       let timer = null;
       let idx = 0
@@ -98,6 +102,7 @@ export default {
           }
         }, 50);
       } else {
+        // 清除所有定时器
         let end = setInterval(function () { }, 10000);
         for (let i = 1; i <= end; i++) {
             clearInterval(i);
@@ -105,10 +110,7 @@ export default {
       }
     },
 
-    hanldStop() {
-      this.isWhile = false;
-      this.setim()
-    },
+    
   },
 };
 </script>
